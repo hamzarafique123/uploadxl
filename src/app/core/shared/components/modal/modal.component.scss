@@ -1,0 +1,106 @@
+modal css 
+
+
+
+// .json-content {
+//   position: relative;
+//   display: flex;
+//   align-items: flex-start;
+  
+
+//   pre {
+//     flex-grow: 1;
+//     margin: 0;
+//     padding: 16px;
+//     border-radius: 4px;
+//     background-color: #fff;
+//     border: 1px solid #ddd;
+//     overflow-x: auto;
+//     font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', monospace;
+//     font-size: 14px;
+//     line-height: 1.5;
+//     color: #333;
+//   }
+
+// }
+
+
+
+.story-list {
+  padding: 16px 0 8px;
+  border-bottom: 1px solid #ddd;
+  margin-top: 20px;
+}
+
+.story-list .scroll-horizontal {
+  padding-left: 16px;
+  white-space: nowrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.story-list .scroll-horizontal .scroll-item {
+  position: relative;
+  display: inline-block;
+  margin-right: 16px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.story-list .scroll-horizontal .scroll-item .item-label {
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+/* Default style for all avatars */
+.story-list .scroll-horizontal ion-avatar {
+  width: 70px;
+  height: 70px;
+}
+
+/* Apply the Instagram-style gradient border to all stories except 'Your Story' */
+.story-list .scroll-horizontal .scroll-item:not(:first-child) ion-avatar {
+  padding: 3px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);
+}
+
+.story-list .scroll-horizontal .scroll-item:not(:first-child) ion-avatar img {
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+/* Style for 'Your Story' (first item), no border effect */
+.story-list .scroll-horizontal .scroll-item:first-child ion-avatar {
+  padding: 2px;
+  border: 2px solid transparent;
+  position: relative;
+}
+
+/* Add button on 'Your Story' */
+.story-list .scroll-horizontal .scroll-item:first-child ion-avatar::after {
+  content: '+';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 24px;
+  height: 24px;
+  background: black;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #fff;
+}
+
+
+
+
+
+
+
+

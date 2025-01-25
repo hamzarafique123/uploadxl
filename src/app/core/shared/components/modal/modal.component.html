@@ -1,0 +1,94 @@
+
+
+
+<!-- <ion-modal [isOpen]="isModalOpen" (willDismiss)="closeModal()">
+
+  <ng-template>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Excel Files</ion-title>
+        <ion-buttons slot="end">
+          <ion-button (click)="closeModal()">Close</ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+      <ion-item>
+        <ion-label position="stacked">Upload Excel Files</ion-label>
+        <input type="file" (change)="onFileChange($event)" accept=".xlsx, .xls" multiple />
+      </ion-item>
+
+      
+      <ion-list class="aa">
+        @for (file of excelFiles; track $index) {
+          <ion-item 
+            [class.selected]="selectedFileIndex === $index"
+            (click)="selectFile($index)"
+          >
+            <ion-label>{{ file.file.name }}</ion-label>
+          </ion-item>
+        }
+      </ion-list>
+
+      <div *ngIf="selectedFileIndex !== null && excelFiles[selectedFileIndex]" class="json-container">
+        <div class="json-header">
+          <h2>JSON Data</h2>
+        </div>
+        <div class="json-content">
+          
+            <ion-icon style="float: right;" name="clipboard-outline" (click)="copyJsonData()"></ion-icon>
+         
+          <pre>{{ excelFiles[selectedFileIndex].jsonString }}</pre>
+
+        </div>
+        
+      </div>
+    </ion-content>
+  </ng-template>
+</ion-modal> -->
+
+
+
+
+
+
+<ion-header>
+  <ion-toolbar color="light">
+   <ion-buttons slot="start">
+   <ion-button color="dark">
+    <ion-icon slot="icon-only" name="camera-outline"></ion-icon>
+   </ion-button>
+   </ion-buttons> 
+   <ion-title>Instagram</ion-title>
+   <ion-buttons slot="end">
+<ion-button color="dark">
+  <ion-icon slot="icon-only" name="send-outline"></ion-icon>
+</ion-button>
+   </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+<div class="story-list">
+  <div class="scroll-horizontal">
+    <div class="scroll-item">
+      <ion-avatar class="avatar-md">
+        <img src="https://picsum.photos/300" alt="Random Image">
+      </ion-avatar>
+      <div class="item-label text-muted">
+        Your Story
+      </div>
+    </div>
+    <div class="scroll-item" *ngFor="let i of  [1,2,3,4,5,6,7,8,9,10]">
+      <div class="item-avatar">
+        <ion-avatar class="avatar-md has-update has-status">
+          <img src="https://dummyimage.com/300x200/000/fff/{{i}}" alt=""> 
+        </ion-avatar>
+      </div>
+      <div class="item-label">
+        John
+      </div>
+    </div>
+  </div>
+</div>  
+</ion-content>

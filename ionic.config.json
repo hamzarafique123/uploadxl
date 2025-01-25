@@ -1,0 +1,7 @@
+{
+  "name": "intern task",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

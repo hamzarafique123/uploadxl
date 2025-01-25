@@ -1,0 +1,48 @@
+
+<ion-content>
+  <ion-button color="success" (click)="openModal()" class="upload-button">
+    Upload Excel
+  </ion-button>
+  
+  <div class="report-container" *ngIf="selectedFileIndex !== null && excelFiles[selectedFileIndex]">
+
+    <div class="report-table">
+      <table>
+        <thead>
+          <tr>
+            @for (header of getHeaders(excelFiles[selectedFileIndex].data); track header) {
+              <th>{{ header }}</th>
+            }
+          </tr>
+        </thead>
+        <tbody>
+          @for (row of excelFiles[selectedFileIndex].data; track row) {
+            <tr>
+              @for (header of getHeaders(excelFiles[selectedFileIndex].data); track header) {
+                <td>{{ row[header] }}</td>
+              }
+            </tr>
+          }
+        </tbody>
+        <tfoot>
+          <tr>
+            @for (header of getHeaders(excelFiles[selectedFileIndex].data); track header) {
+              <td>Total</td>
+            }
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>
+
+  <app-modal
+    [isModalOpen]="isModalOpen"
+    [selectedFileIndex]="selectedFileIndex"
+    (modalClose)="closeModal()"
+    (excelDataUpdate)="handleExcelDataUpdate($event)"
+    (fileSelect)="selectFile($event)"
+  ></app-modal>
+</ion-content>
+
+
+
